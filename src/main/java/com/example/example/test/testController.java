@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 주소구조
@@ -121,13 +123,29 @@ public class testController {
     }
 
     @GetMapping("/test.api")
-    public String showMap() {
+    public Map<String, Object> showMap() {
         int testCnt = 0;
         while(testCnt < 10) {
             testCnt = testCnt + 1;
         }
 
-        return "test " + testCnt;
+        Map<String, Object> test = new HashMap<>();
+        test.put("test", "test");
+
+        return test;
+    }
+
+    @GetMapping("/test2.api")
+    public Map<String, Object> showMap2() {
+        int testCnt1 = 0;
+        while(testCnt1 < 20) {
+            testCnt1 = testCnt1 + 1;
+        }
+
+        Map<String, Object> test2 = new HashMap<>();
+        test2.put("key", "value");
+
+        return test2;
     }
 }
 
