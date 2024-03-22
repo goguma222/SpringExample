@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/cmm")
-public class test_controll {
+public class testController {
 
     public Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -130,3 +130,7 @@ public class test_controll {
         return "test " + testCnt;
     }
 }
+
+// 주소구조
+// - 메인주소 / 컨트롤맵핑주소 / 함수맵핑주소
+
