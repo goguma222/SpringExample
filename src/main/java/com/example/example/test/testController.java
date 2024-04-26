@@ -3,6 +3,7 @@ package com.example.example.test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -135,7 +136,7 @@ public class testController {
         return test;
     }
 
-    @GetMapping("/test2.api")
+    @PostMapping ("/test2.api")
     public Map<String, Object> showMap2() {
         int testCnt1 = 0;
         while(testCnt1 < 20) {
@@ -143,6 +144,7 @@ public class testController {
         }
 
         Map<String, Object> test2 = new HashMap<>();
+        test2.put("key", "value");
         test2.put("key", "value");
 
         return test2;
